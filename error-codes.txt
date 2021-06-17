@@ -1,0 +1,12 @@
+
+001 - Whitespace detected.
+002 - Unknown function used.
+003 - Non-existant file called for.
+004 - Parameter given to function that does not accept inputs.
+005 - Variable called for that does not exist.
+006 - Unknown if statement condition.
+
+
+
+
+
