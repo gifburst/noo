@@ -45,8 +45,8 @@ echo  Squirrel-Navigator 0.1
 echo  2021 SQUIRREL COMPUTERS
 echo  ........................
 echo.
-echo  Squirrel-Navigator is a private and secure text based SLP browser
-echo  created by the creator of SLP
+echo  Squirrel-Navigator is the official SLP navigator written by the creator of SLP
+echo  Squirrel-Navigator runs the SLPL (Squirrel-Local-Pages-Language)
 echo.
 echo  this version was made on the 18/06/2021
 pause
