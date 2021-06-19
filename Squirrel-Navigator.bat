@@ -72,7 +72,7 @@ goto home
 echo.
 echo              Welcome to Squirrel-Navigator version 0.1 
 echo                             Enter a SLP  
-set /p line=%CD%^>
+set /p line=C:\Users\%username%\SLP-main\Pages^>
 if not "%line:.slp=%"=="%line%" goto slp_run
 if not "%line:ifval1 =%"=="%line%" goto ifval1
 if not "%line:ifcond =%"=="%line%" goto ifcond
