@@ -4,24 +4,74 @@ cd %~dp0
 set dir=
 set func_scan=true
 cls
-:term                             
-echo               (*********(    
-echo               /,,*    /*,,*  
-echo           ****/,,*      ,,*  
-echo           *,**/,,,*****,,*#  
-echo           *,**/,,*           
-echo      (/////(**/,,*           
-echo   (///*   /////**/           
-echo   (///    *,,**//////(       
-echo     ////////(////////(       
-echo            ////              
-echo   ///#     #///              
-echo    (/////////(               
-echo SLPL the Squirrel Local Pages Language
-echo Type the name of your script to run it. (Example: "script.slp")
+:home
+cls
+echo              Welcome to Squirrel-Navigator version 0.1 
+echo                    Release dated on June 18, 2021  
 echo.
-:term2
+echo                   About Squirrel-Navigator? <ABOUT1> 
+echo                   About SLP?                <ABOUT2> 
+echo                   About SLTP?               <ABOUT3> 
+echo                   SLP Glossary              <GLOSSARY> 
+echo                   SLP tips                  <TIPS> 
+echo                   Catalog                   <LOG> 
+echo                   Create a Page             <EDIT> 
 echo.
+echo     ............................................................. 
+echo                      s enter a SLP   ? for help 
+echo.
+echo                      m returns here  q quits 
+echo     ............................................................. 
+echo.
+echo     Squirrel-Navigator and SLP was written by squirrelcom (c) 2021 
+echo                      Squirrel Computers (c) 2021 
+echo.
+set /p udefine= Type your input:
+if %udefine%==ABOUT1 goto about
+if %udefine%==ABOUT2 goto SLP
+if %udefine%==ABOUT3 goto sltp
+if %udefine%==GLOSSARY goto gloss
+if %udefine%==TIPS goto tip
+if %udefine%==LOG goto log
+if %udefine%==EDIT goto edit
+if %udefine%==s goto enter
+if %udefine%==? goto help
+if %udefine%==q goto exit
+
+:about
+cls
+echo  ........................
+echo  Squirrel-Navigator 0.1
+echo  2021 SQUIRREL COMPUTERS
+echo  ........................
+echo.
+echo  Squirrel-Navigator is a private and secure text based SLP browser
+echo  created by the creator of SLP
+echo.
+echo  this version was made on the 18/06/2021
+pause
+goto home
+
+:SLP
+cls
+echo  ........................
+echo  Squirrel-Navigator 0.1
+echo  2021 SQUIRREL COMPUTERS
+echo  ........................
+echo.
+echo  SLP stands fo Squirrel Local Pages
+echo  SLP is a version of the World Wide Web that is offline
+echo  All pages on SLP are local to your computer
+echo.
+echo  SLP is a product of Squirrel Computers
+echo.
+pause
+goto home
+
+:enter
+echo.
+echo              Welcome to Squirrel-Navigator version 0.1 
+echo                             Enter a SLP  
 set /p line=%CD%^>
 if not "%line:.slp=%"=="%line%" goto slp_run
 if not "%line:ifval1 =%"=="%line%" goto ifval1
@@ -623,7 +673,7 @@ set errorcode=003
 if not "%func_scan%"=="true" (
 goto syntax_error
 ) else (
-goto term2
+goto home
 )
 )
 :syntax_error
